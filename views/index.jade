@@ -5,7 +5,7 @@ block content
     h1.text-white= title
     p.text-muted Welcome to Dani's Animals 3
   .row
-    .col-md-5
+    .col-sm-4.flex-last
       h2.animalHeader Animal Details:
       #animalInfo
         p
@@ -23,8 +23,23 @@ block content
           br
           strong Color:
           |  <span id='animalInfoColor'></span>
-    .col-md-7
+      #addWrapper
+        h2.addAFriendHeader Add A Friend:
+        #addAnimal
+          fieldset
+            input#inputAnimalName(type='text', placeholder='Name')
+            input#inputAnimalAge(type='text', placeholder='Age')
+            br
+            input#inputAnimalType(type='text', placeholder='Type')
+            input#inputAnimalColor(type='text', placeholder='Color')
+            br
+            input#inputAnimalFood(type='text', placeholder='Food')
+            br
+            button#btnAddAnimal.btn.btn-sm.btn-primary Add A Friend
+    .col-sm-8
       h2.animalHeader Animal List:
+      p
+        small#animalListInstruction.text-muted (scroll down in the table to see more!)
       #animalList
         table.table.table-bordered.table-hover
           thead.thead-default
@@ -34,17 +49,4 @@ block content
             th Delete?
           tbody#animalBody
   .row
-    .col-md-5
-    .col-md-7
-      h2.addAFriendHeader Add A Friend:
-      #addAnimal
-        fieldset
-          input#inputAnimalName(type='text', placeholder='Name')
-          input#inputAnimalAge(type='text', placeholder='Age')
-          br
-          input#inputAnimalType(type='text', placeholder='Type')
-          input#inputAnimalColor(type='text', placeholder='Color')
-          br
-          input#inputAnimalFood(type='text', placeholder='Food')
-          br
-          button#btnAddAnimal.btn.btn-sm.btn-primary Add A Friend
+    .col

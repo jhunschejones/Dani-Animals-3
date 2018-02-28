@@ -8,7 +8,8 @@
 }
 
 .animalHeader {
-    padding-top: 50px;
+    padding-top: 40px;
+    margin-bottom: 0px;
     margin-left: 12px;
     /* text-align: center; */
 }
@@ -18,14 +19,34 @@ th {
 } 
 #animalList, #addAnimal{
     margin-left: 10px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     margin-bottom: 20px;
 }
 
 #animalInfo p {
     margin-left: 10px;
+    padding-left: 10px;
     margin-right: 10px;
+    margin-top: 3px;
+    padding-top: 4px;
     margin-bottom: 0px;
+    padding-bottom: 4px;
+    background-color: #C1F0FF;
+    border-radius: 5px;
+}
+
+#animalListInstruction {
+    margin-left: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#addWrapper {
+    margin-top: 30px;
+}
+
+.flex-last {
+    margin-top: 10px;
 }
 
 #addAnimal input {
@@ -33,7 +54,7 @@ th {
 }
 
 #addAnimal button {
-    margin: 2px;
+    margin: 3px;
 }
 
 .addAFriendHeader {
@@ -73,10 +94,18 @@ th {
 }
 
 /* Scrolling table body for smaller screen size */
-@media screen and (max-height : 750px) {
+@media screen and (max-height : 550px) {
     #animalList {
         height: 19em;
     }
+    /* #addWrapper {
+        display: none;
+    } */
+
+    .flex-last {
+        margin-top: 0px;
+    }
+
     table {
         display: flex;
         flex-flow: column;
@@ -101,5 +130,18 @@ th {
     table thead, table tbody tr {
         display: table;
         table-layout: fixed;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .flex-last {
+        margin-top: 0px;
+    }
+
+    .animalHeader {
+        padding-top: 20px;
+        margin-bottom: 0px;
+        margin-left: 12px;
+        /* text-align: center; */
     }
 }
