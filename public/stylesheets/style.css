@@ -1,0 +1,105 @@
+.row {
+    margin: 5px;
+}
+
+.navbar {
+    padding-top: 18px;
+    padding-bottom: 5px;
+}
+
+.animalHeader {
+    padding-top: 50px;
+    margin-left: 12px;
+    /* text-align: center; */
+}
+
+th {
+    text-align: center;
+} 
+#animalList, #addAnimal{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#animalInfo p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+#addAnimal input {
+    margin: 2px;
+}
+
+#addAnimal button {
+    margin: 2px;
+}
+
+.addAFriendHeader {
+    margin-left: 12px;
+}
+
+/* Scrolling table body for larger screen size */
+@media screen {
+    #animalList {
+        height: 22em;
+    }
+    table {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        width: 100%;
+    }
+    table thead {
+        /* head takes the height it requires, 
+        and it's not scaled when table is resized */
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    table tbody {
+        /* body takes all the remaining available space */
+        flex: 1 1 auto;
+        display: block;
+        overflow-y: scroll;
+    }
+    table tbody tr {
+        width: 100%;
+    }
+    table thead, table tbody tr {
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+/* Scrolling table body for smaller screen size */
+@media screen and (max-height : 750px) {
+    #animalList {
+        height: 19em;
+    }
+    table {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        width: 100%;
+    }
+    table thead {
+        /* head takes the height it requires, 
+        and it's not scaled when table is resized */
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    table tbody {
+        /* body takes all the remaining available space */
+        flex: 1 1 auto;
+        display: block;
+        overflow-y: scroll;
+    }
+    table tbody tr {
+        width: 100%;
+    }
+    table thead, table tbody tr {
+        display: table;
+        table-layout: fixed;
+    }
+}
