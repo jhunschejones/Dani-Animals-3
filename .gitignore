@@ -1,2 +1,4 @@
 node_modules/
 public/stylesheets/tutorial.css
+views/index.jade.lock
+views/index.jade.lock2

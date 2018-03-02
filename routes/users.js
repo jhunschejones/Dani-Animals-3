@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET animals listing. */
+// GET animal list from database
+
 router.get('/animallist', function(req, res) {
   var db = req.db;
   var collection = db.get('usercollection');
@@ -23,6 +24,7 @@ router.post('/addanimal', function(req, res) {
 });
 
 // DELETE to deleteanimal
+
 router.delete('/deleteanimal/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('usercollection');

@@ -10,10 +10,10 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('mongodb://user:password@ds027819.mlab.com:27819/danianimals');
 
-// I believe this throws a message when connected
-db.then(() => {
-  console.log('Connected correctly to server')
-})
+// Use this to see when the database is connected
+// db.then(() => {
+//   console.log('Connected correctly to server')
+// })
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

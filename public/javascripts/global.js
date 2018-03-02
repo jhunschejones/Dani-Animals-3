@@ -1,9 +1,8 @@
 // setting up array variable for data
 var animalListData = [];
 
-
 $(document).ready(function() {
-    // populate table on page load
+    // call populate table on page load
     populateTable();
     // Animal name link click
     $('#animalList table tbody').on('click', 'td a.linkshowanimal', showAnimalInfo);
@@ -14,11 +13,11 @@ $(document).ready(function() {
 })
 
 
-
 function populateTable(){
     var tableContent = '';
 
     // adding rows and cells for each item in JSON
+    // remember, this URL is where the router is pulling the data
     $.getJSON( '/users/animallist', function( data ) {
         animalListData = data;
         $.each(data, function(){
@@ -58,7 +57,7 @@ function addAnimal(event) {
 
     var errorCount = 0;
     $('#addAnimal input').each(function(index, val) {
-        if($(this).val === '') { errorCount++; }
+        if($(this).val() === '') { errorCount++; }
     });
 
     if(errorCount === 0) {
@@ -92,7 +91,7 @@ function addAnimal(event) {
     }
     else {
         // Here's the error if a field is blank
-        alert('Please fill in all fields');
+        alert('Please fill in all the fields.');
         return false;
     }
 };

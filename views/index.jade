@@ -4,49 +4,54 @@ block content
   nav.navbar.navbar-inverse.bg-inverse
     h1.text-white= title
     p.text-muted Welcome to Dani's Animals 3
-  .row
-    .col-sm-4.flex-last
-      h2.animalHeader Animal Details:
-      #animalInfo
-        p
-          strong Name:
-          |  <span id='animalInfoName'></span>
-          br
-          strong Age:
-          |  <span id='animalInfoAge'></span>    
-          br 
-          strong Type:
-          |  <span id='animalInfoType'></span>
-          br
-          strong Food:
-          |  <span id='animalInfoFood'></span>
-          br
-          strong Color:
-          |  <span id='animalInfoColor'></span>
-      #addWrapper
-        h2.addAFriendHeader Add A Friend:
-        #addAnimal
-          fieldset
-            input#inputAnimalName(type='text', placeholder='Name')
-            input#inputAnimalAge(type='text', placeholder='Age')
-            br
-            input#inputAnimalType(type='text', placeholder='Type')
-            input#inputAnimalColor(type='text', placeholder='Color')
-            br
-            input#inputAnimalFood(type='text', placeholder='Food')
-            br
-            button#btnAddAnimal.btn.btn-sm.btn-primary Add A Friend
-    .col-sm-8
+  .row            
+    .col
       h2.animalHeader Animal List:
       p
         small#animalListInstruction.text-muted (scroll down in the table to see more!)
       #animalList
         table.table.table-bordered.table-hover
           thead.thead-default
-            th Animal Name
-            th Animal Age
+            th Name
+            th Age
             th Animal Type
             th Delete?
           tbody#animalBody
   .row
     .col
+      #animalInfo
+      .card
+        h4.card-header Animal Details
+        .card-block
+          p.card-text
+            strong Name:
+            |  <span id='animalInfoName'></span>
+            br
+            strong Age:
+            |  <span id='animalInfoAge'></span>    
+            br 
+            strong Type:
+            |  <span id='animalInfoType'></span>
+            br
+            strong Food:
+            |  <span id='animalInfoFood'></span>
+            br
+            strong Color:
+            |  <span id='animalInfoColor'></span>
+    .col          
+      #addWrapper
+      .card
+        h4.card-header Add A Friend
+        .card-block
+          #addAnimal
+            fieldset
+              input#inputAnimalName.form-control(type='text', placeholder='Name')
+              input#inputAnimalAge.form-control(type='text', placeholder='Age')
+              input#inputAnimalType.form-control(type='text', placeholder='Type')
+              input#inputAnimalColor.form-control(type='text', placeholder='Color')
+              input#inputAnimalFood.form-control(type='text', placeholder='Food')
+              button#btnAddAnimal.btn.btn-sm.btn-primary Add A Friend
+  hr
+  ul.nav.justify-content-end.my_footer
+    li.nav-item
+      a.nav-link.active(href="mailto:joshua@hunschejones.com?subject=Dani's Animals 3") Questions & Support
