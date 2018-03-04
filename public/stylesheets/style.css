@@ -77,61 +77,6 @@ table thead, table tbody tr {
     table-layout: fixed;
 }
 
-/* ==== Scrolling table body for smaller screen size ==== */
-@media screen and (max-height : 550px) {
-
-    /* No more top margins when stacked */
-    .flex-last, #animalInfo {
-        margin-top: 0px;
-    }
-
-    /* Resizing animal list and scrolling table */
-    #animalList {
-        height: 19em;
-    }
-
-    table {
-        display: flex;
-        flex-flow: column;
-        height: 100%;
-        width: 100%;
-    }
-    table thead {
-        /* head takes the height it requires, 
-        and it's not scaled when table is resized */
-        flex: 0 0 auto;
-        width: 100%;
-    }
-    table tbody {
-        /* body takes all the remaining 
-        available space */
-        flex: 1 1 auto;
-        display: block;
-        overflow-y: scroll;
-    }
-    table tbody tr {
-        width: 100%;
-    }
-    table thead, table tbody tr {
-        display: table;
-        table-layout: fixed;
-    }
-}
-
-@media screen and (max-width : 550px) {
-    .flex-last, #animalInfo {
-        margin-top: 0px;
-    }
-
-    .animalHeader {
-        padding-top: 20px;
-        margin-bottom: 0px;
-        margin-left: 12px;
-        /* text-align: center; */
-    }
-}
-
-
 /* ======= style for the footer ======== */
 .my_footer a {
     color: lightgray;
