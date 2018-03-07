@@ -79,14 +79,14 @@ function addAnimal(event) {
             if (response.msg === '') {
                 // Clear form inputs
                 $('#addAnimal fieldset input').val('');
-
-                // Update the table
-                populateTable();
             }
             else {
                 // Sending alert if something goes wrong
                 alert('Error: ' + response.msg);
             }
+
+            // Update the table
+            populateTable();
         });
     }
     else {
