@@ -3,3 +3,4 @@ public/stylesheets/tutorial.css
 public/stylesheets/style.css.lock
 views/index.jade.lock
 views/index.jade.lock2
+newrelic_agent.log

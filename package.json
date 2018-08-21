@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "pm2 start ./bin/www --watch"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -13,8 +13,10 @@
     "jade": "~1.11.0",
     "mongodb": "^2.2.25",
     "monk": "^4.0.0",
-    "morgan": "~1.9.0",
+    "morgan": "^1.9.0",
     "newrelic": "^4.8.0",
-    "serve-favicon": "~2.4.5"
+    "pm2": "^3.0.3",
+    "serve-favicon": "~2.4.5",
+    "winston": "^2.4.2"
   }
 }
