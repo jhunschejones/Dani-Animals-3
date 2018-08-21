@@ -1,9 +1,9 @@
 {
   "name": "dani-animals-3",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./bin/www --watch"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
